@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({
-    'Client-ID': '<client_id>',
+    'Client-ID': 'livbjmuyns0m686mhrvlqf1m84jf0i',
     // 'Authorization': 'my-auth-token'
     // 'Content-Type':  'application/json',
   })
