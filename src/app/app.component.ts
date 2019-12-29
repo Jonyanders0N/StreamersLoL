@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.initForm();
+    // this.getVideos();
   }
 
   initForm() {
@@ -36,17 +37,15 @@ export class AppComponent implements OnInit {
 
   getSummonerId() {
     const form = this.formSearch.controls;
-    this.lolService.getSummonerId(form['summonerName'].value).subscribe(data => {
-      console.log(data);
-    });
+    this.lolService.getSummonerId(form['summonerName'].value);
   }
 
-  getMatchesId() {
-    const form = this.formSearch.controls;
-    this.lolService.getMatchesId(form['streamerName'].value, form['championId'].value).subscribe(data => {
-      console.log(data);
-    });
-  }
+  // getMatchesId() {
+  //   const form = this.formSearch.controls;
+  //   this.lolService.getMatchesId(form['streamerName'].value, form['championId'].value).subscribe(data => {
+  //     console.log(data);
+  //   });
+  // }
 
   getVideos() {
     this.twitchService.getVideos().subscribe(data => {
